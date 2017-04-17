@@ -209,7 +209,7 @@
                 android:backgroundTint="#960000ff"
                 android:contentDescription="@string/op_divide"
                 android:elevation="2dp"
-                app:srcCompat="@drawable/divide" />
+                android:src="@drawable/divide" />
 
             <ImageButton
                 android:id="@+id/multiplyButton"
@@ -222,7 +222,7 @@
                 android:backgroundTint="#960000ff"
                 android:contentDescription="@string/op_multiply"
                 android:elevation="2dp"
-                app:srcCompat="@drawable/multiply" />
+                android:src="@drawable/multiply" />
 
             <ImageButton
                 android:id="@+id/subtractButton"
@@ -235,7 +235,7 @@
                 android:backgroundTint="#960000ff"
                 android:contentDescription="@string/op_subtract"
                 android:elevation="2dp"
-                app:srcCompat="@drawable/subtract" />
+                android:src="@drawable/subtract" />
 
             <ImageButton
                 android:id="@+id/addButton"
@@ -248,7 +248,7 @@
                 android:backgroundTint="#960000ff"
                 android:contentDescription="@string/op_add"
                 android:elevation="2dp"
-                app:srcCompat="@drawable/add" />
+                android:src="@drawable/add" />
         </GridLayout>
     </LinearLayout>
 
@@ -263,7 +263,7 @@
         android:elevation="5dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/equal"
+        android:src="@drawable/equal"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 </android.support.constraint.ConstraintLayout>
