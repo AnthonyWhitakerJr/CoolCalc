@@ -46,7 +46,7 @@ public class CalcActivity extends Activity {
 
     }
 
-    Operation activeOperation = Operation.EQUAL;
+    Operation activeOperation = null;
     String enteredNumber = "";
     String operand1 = "";
     String operand2 = "";
@@ -59,6 +59,7 @@ public class CalcActivity extends Activity {
         setContentView(R.layout.activity_calc);
 
         resultView = (TextView)findViewById(R.id.resultText);
+        reset();
 
         for(CalcNumber number : CalcNumber.values()) {
             setupNumberButton(number);
@@ -72,7 +73,7 @@ public class CalcActivity extends Activity {
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clearButtonPressed();
+                reset();
             }
         });
     }
@@ -117,7 +118,7 @@ public class CalcActivity extends Activity {
             enteredNumber = "";
         }
 
-        if(!operand1.isEmpty() && !operand2.isEmpty() && activeOperation != Operation.EQUAL) {
+        if(!operand1.isEmpty() && !operand2.isEmpty() && activeOperation != null) {
             int result = 0;
             switch (activeOperation) {
                 case ADD:
@@ -143,10 +144,10 @@ public class CalcActivity extends Activity {
         }
     }
 
-    private void clearButtonPressed() {
+    private void reset() {
         operand1 = "";
         operand2 = "";
-        activeOperation = Operation.EQUAL;
+        activeOperation = null;
         enteredNumber = "";
         resultView.setText("0");
     }
